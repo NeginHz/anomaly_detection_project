@@ -1,0 +1,26 @@
+services:
+  api:
+    build: .
+    container_name: anomaly_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    restart: unless-stopped
+
+  simulator:
+    build: .
+    container_name: anomaly_sensor_sim
+    depends_on:
+      - api
+    command: ["python", "scripts/sensor_sim.py"]
+    environment:
+      - API_URL=http://api:8000/predict
+      - SLEEP_SEC=3
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

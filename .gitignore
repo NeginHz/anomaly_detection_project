@@ -1,0 +1,21 @@
+# ---- Python cache ----
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ---- Virtual environments ----
+env/
+venv/
+.venv/
+
+
+# ---- IDE / editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+

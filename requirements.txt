@@ -1,0 +1,16 @@
+# Core ML & data
+numpy
+pandas
+scikit-learn
+
+# API layer (for serve.py)
+flask
+flask-cors
+requests
+
+# Visualization (for realtime_plot.py)
+matplotlib
+
+# Monitoring and config (optional but useful)
+prometheus-client
+python-dotenv
