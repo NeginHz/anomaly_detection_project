@@ -226,4 +226,4 @@ This project demonstrates a **complete MLOps-style prototype** for **real-time I
 *Author:*  
 **Negin Hezarjaribi**  
 Applied Artificial Intelligence Student – *Model to Product*  
-*“From data to decisions — in real time.”*
+*“From data to decisions, in real time.”*
