@@ -14,6 +14,8 @@ The system is designed to be:
 ---
 
 ## System Architecture
+This diagram shows the complete anomaly detection workflow including data ingestion, preprocessing, feature engineering, model training, and detection pipeline.
+![System Architecture](architecture.png)
 
 ```
          ┌────────────────────┐
