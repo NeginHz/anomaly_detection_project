@@ -17,30 +17,6 @@ The system is designed to be:
 This diagram shows the complete anomaly detection workflow including data ingestion, preprocessing, feature engineering, model training, and detection pipeline.
 ![System Architecture](architecture.png)
 
-```
-         ┌────────────────────┐
-         │ make_baseline.py   │ → Generate baseline healthy data
-         └──────────┬─────────┘
-                    │
-           ┌────────▼────────┐
-           │   train.py      │ → Train IsolationForest model
-           │  (baseline.csv) │
-           └────────┬────────┘
-                    │
-             Artifacts (.pkl, .txt)
-                    │
-           ┌────────▼────────┐
-           │   serve.py      │ → REST API (Flask)
-           │ /health /predict /reload /metrics /history
-           └────────┬────────┘
-                    │
-   ┌────────────────┴────────────────┐
-   │                                 │
-┌──▼────────────┐           ┌────────▼────────┐
-│ sensor_sim.py │ → Stream  │ realtime_plot.py│
-│ (send data)   │           │  (live chart)   │
-└───────────────┘           └─────────────────┘
-```
 
 ---
 
